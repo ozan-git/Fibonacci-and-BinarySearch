@@ -42,16 +42,16 @@ def BinarySearch(numbersList, keyValue):
 	# Specify high is the number of elements minus 1.
 	high = len(numbersList) - 1
 	# Firstly we specify found equal to 'False'.
-	Found = False
+	is_found = False
 	# Binary search algorithm is working while low <= high and not Found.
 	# start_time = time.time()
-	while low <= high and not Found:
+	while low <= high and not is_found:
 		iteration_number += 1
 		mid = (low + high) // 2
 		# If key equals to mid value,'Found' becomes True.
 		if keyValue == numbersList[mid]:
 			index_num = mid
-			Found = True
+			is_found = True
 		# If key bigger than mid value,low value equals to mid value plus one.
 		elif keyValue > numbersList[mid]:
 			low = mid + 1
@@ -60,7 +60,7 @@ def BinarySearch(numbersList, keyValue):
 			high = mid - 1
 	# end_time = time.time()
 	# If Found equal to True,we print 'Found'.
-	if Found:
+	if is_found:
 		# processes_time = end_time - start_time
 		print("Found.")
 		print(f"Found on the {iteration_number}th search. ")
