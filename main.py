@@ -39,7 +39,7 @@ def BinarySearch(numbersList, keyValue):
 	index_num = 0
 	iteration_number = 0
 	low = 0
-	# We specify high is the number of elements minus 1.
+	# Specify high is the number of elements minus 1.
 	high = len(numbersList) - 1
 	# Firstly we specify found equal to 'False'.
 	Found = False
