@@ -84,7 +84,7 @@ def check_option_input():
 # Press 3 to exit.
 repeat_main = True
 while repeat_main:
-	# We are showing options for the user to choose.
+	# User menu screen.
 	print("""
 Please choose one:
 Press 1 Fibonacci,
@@ -107,7 +107,7 @@ Press 3 Exit.
 
 			# A file is created on your computer for the print result. The Fibonacci value is printed to the generated file.
 			file_txt = open("fibonacci.txt", "w")
-			print("{}th fibonacci number:".format(nth), Fibonacci(nth), file=file_txt)
+			print(f"{nth}th fibonacci number:", Fibonacci(nth), file=file_txt)
 			file_txt.close()
 		# If you enter invalid character,it gives alert.
 		except ValueError:
@@ -115,7 +115,7 @@ Press 3 Exit.
 	# If user choose 2,the binary search algorithm is working.
 	elif choice == '2':
 		try:
-			# We are showing options for the user to choose.
+			# Showing options for the user to choose.
 			print("""
 Please choose which action you want to perform: 
 press 1, you will enter random, 
@@ -154,10 +154,12 @@ press 3, the program will end.
 				index = 0
 				for k in range(0, size):
 					index += 1
-					number = int(input("Number {}:".format(index)))  # Users enter the numbers for the list.
-					numberList.append(number)  # We add number in list.
-					numberList.sort()  # We sort the list.
-					print("Sorted list:", numberList)  # We print sorted list.
+					# Users enter the numbers for the list.
+					number = int(input(f"Number {index}:"))
+					numberList.append(number)
+					numberList.sort()
+					# Print sorted list.
+					print("Sorted list:", numberList)
 				# Determine key for binary search.
 				key = int(input("Enter the key: "))
 
@@ -168,4 +170,4 @@ press 3, the program will end.
 			print("You entered the undefined character.\nPlease, enter a valid number.")
 	# If user choose except of 0,1 or 2,the algorithm is NOT working and it gives alert.
 	else:
-		print("Please enter the 0(Quit) , 1(Fibonacci) or 2(Binary Search)...")
+		print("Please select 1(Fibonacci), 2(BinarySearch) or 3(Exit). ")

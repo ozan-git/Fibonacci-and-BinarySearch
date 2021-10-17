@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/fibonacciAndBinarySearch.iml" filepath="$PROJECT_DIR$/.idea/fibonacciAndBinarySearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Fibonacci-and-BinarySearch.iml" filepath="$PROJECT_DIR$/.idea/Fibonacci-and-BinarySearch.iml" />
     </modules>
   </component>
 </project>
